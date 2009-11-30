@@ -17,6 +17,7 @@ import edu.berkeley.nlp.syntax.Tree;
 import edu.berkeley.nlp.syntax.Trees;
 import edu.berkeley.nlp.syntax.Trees.PennTreeReader;
 import edu.berkeley.nlp.util.Numberer;
+import edu.jhu.cs.asharm24.RenderHTML;
 
 /**
  * @author petrov
@@ -46,6 +47,10 @@ public class TreeLabeler {
 
 		@Option(name = "-outputFile", usage = "Store output in this file instead of printing it to STDOUT.")
 		public String outputFile;
+		
+		@Option(name = "-html", usage = "Output labled html for input treebank.")
+		public boolean genHTML;
+		
 	}
 	
 	
@@ -164,8 +169,18 @@ public class TreeLabeler {
     		Tree<StateSet> stateSetTree = StateSetTreeList.stringTreeToStatesetTree(tree, numSubstates, false, tagNumberer);
     		allocate(stateSetTree);
     		Tree<String> labeledTree = treeLabeler.label(stateSetTree, sentence, opts.scores);
-    		if (labeledTree!=null && labeledTree.getChildren().size()>0) outputData.write(labeledTree.getChildren().get(0)+"\n");
-    		else outputData.write("()\n");
+    		
+    		if (opts.genHTML) {
+        		if (labeledTree!=null && labeledTree.getChildren().size()>0) //some error, why is it only returning a part ??? 
+        			outputData.write(RenderHTML.getHTMLForParse(labeledTree) + "\n");//outputData.write(labeledTree.getChildren().get(0)+"\n");
+        		else 
+        			outputData.write("()\n");    			
+    		} else {
+	    		if (labeledTree!=null && labeledTree.getChildren().size()>0) //some error, why is it only returning a part ??? 
+	    			outputData.write(labeledTree + "\n");//outputData.write(labeledTree.getChildren().get(0)+"\n");
+	    		else 
+	    			outputData.write("()\n");
+    		}
     		outputData.flush();
     	 }
     	outputData.close();
@@ -204,3 +219,4 @@ public class TreeLabeler {
   }
 	
 }
+

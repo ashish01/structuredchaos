@@ -1,36 +1,41 @@
 import random
 import sys
-
-text = "(HTML (HEAD (TITLE (WSEQ Jules) (WSEQ Bass)))(BODY (H1 (WSEQ All) (WSEQ movies) (WSEQ by) (WSEQ Jules) (WSEQ Bass))(TABLE (TR (TD (WSEQ Title))(TD (WSEQ Average) (WSEQ Rating))(TD (WSEQ Release) (WSEQ Date))(TD (WSEQ TVMPAA) (WSEQ Rating))(TD (WSEQ Cast))(TD (WSEQ Directed) (WSEQ By))(TD (WSEQ Duration))(TD (WSEQ Genre)))(TR (TD (WSEQ The) (WSEQ Princess) (WSEQ Collection))(TD (WSEQ 2) (WSEQ .) (WSEQ 1))(TD (WSEQ 2005))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ NA))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 5400))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Book) (WSEQ Characters)))(TR (TD (WSEQ The) (WSEQ Last) (WSEQ Unicorn))(TD (WSEQ 3) (WSEQ .) (WSEQ 9))(TD (WSEQ 1982))(TD (WSEQ MPAA) (WSEQ G))(TD (WSEQ Alan) (WSEQ Arkin) (WSEQ ,) (WSEQ Jeff) (WSEQ Bridges) (WSEQ ,) (WSEQ Mia) (WSEQ Farrow) (WSEQ ,) (WSEQ Tammy) (WSEQ Grimes) (WSEQ ,) (WSEQ Robert) (WSEQ Klein) (WSEQ ,) (WSEQ Angela) (WSEQ Lansbury) (WSEQ ,) (WSEQ Christopher) (WSEQ Lee) (WSEQ ,) (WSEQ Keenan) (WSEQ Wynn) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ Rene) (WSEQ Auberjonois) (WSEQ ,) (WSEQ Brother) (WSEQ Theodore) (WSEQ ,) (WSEQ Jack) (WSEQ Lester) (WSEQ ,) (WSEQ Ed) (WSEQ Peck) (WSEQ ,) (WSEQ Don) (WSEQ Messick) (WSEQ ,) (WSEQ Nellie) (WSEQ Bellflower) (WSEQ ,) (WSEQ Kenneth) (WSEQ Jennings))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 5580))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ SciFi) (WSEQ ) (WSEQ Fantasy) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Lionsgate) (WSEQ Home) (WSEQ Entertainment)))(TR (TD (WSEQ Rudolph) (WSEQ and) (WSEQ Frostys) (WSEQ Christmas) (WSEQ in) (WSEQ July))(TD (WSEQ 3) (WSEQ .) (WSEQ 7))(TD (WSEQ 1982))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Mickey) (WSEQ Rooney) (WSEQ ,) (WSEQ Jackie) (WSEQ Vernon) (WSEQ ,) (WSEQ Shelley) (WSEQ Winters) (WSEQ ,) (WSEQ Ethel) (WSEQ Merman) (WSEQ ,) (WSEQ Red) (WSEQ Buttons))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 5820))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Adventures) (WSEQ ,) (WSEQ Warner) (WSEQ Home) (WSEQ Video)))(TR (TD (WSEQ The) (WSEQ Return) (WSEQ of) (WSEQ the) (WSEQ King))(TD (WSEQ 3) (WSEQ .) (WSEQ 5))(TD (WSEQ 1980))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ William) (WSEQ Conrad) (WSEQ ,) (WSEQ Orson) (WSEQ Bean) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ John) (WSEQ Huston) (WSEQ ,) (WSEQ Casey) (WSEQ Kasem) (WSEQ ,) (WSEQ Roddy) (WSEQ McDowall) (WSEQ ,) (WSEQ Brother) (WSEQ Theodore))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 5880))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ SciFi) (WSEQ ) (WSEQ Fantasy) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Adventures) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Warner) (WSEQ Home) (WSEQ Video) (WSEQ ,) (WSEQ Ages) (WSEQ 810) (WSEQ ,) (WSEQ Ages) (WSEQ 1112)))(TR (TD (WSEQ Jack) (WSEQ Frost))(TD (WSEQ 3) (WSEQ .) (WSEQ 7))(TD (WSEQ 1979))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Buddy) (WSEQ Hackett) (WSEQ ,) (WSEQ Debra) (WSEQ Clinger) (WSEQ ,) (WSEQ Larry) (WSEQ Storch) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ Robert) (WSEQ Morse) (WSEQ ,) (WSEQ Dave) (WSEQ Garroway) (WSEQ ,) (WSEQ Don) (WSEQ Messick) (WSEQ ,) (WSEQ Sonny) (WSEQ Melendrez))(TD (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 2940))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ SciFi) (WSEQ ) (WSEQ Fantasy) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810)))(TR (TD (WSEQ The) (WSEQ Hobbit))(TD (WSEQ 3) (WSEQ .) (WSEQ 7))(TD (WSEQ 1978))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ John) (WSEQ Huston) (WSEQ ,) (WSEQ Otto) (WSEQ Preminger) (WSEQ ,) (WSEQ Cyril) (WSEQ Ritchard) (WSEQ ,) (WSEQ Brother) (WSEQ Theodore) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ Don) (WSEQ Messick) (WSEQ ,) (WSEQ John) (WSEQ Stephenson))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 4620))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ SciFi) (WSEQ ) (WSEQ Fantasy) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Warner) (WSEQ Home) (WSEQ Video) (WSEQ ,) (WSEQ Ages) (WSEQ 810) (WSEQ ,) (WSEQ Ages) (WSEQ 1112)))(TR (TD (WSEQ The) (WSEQ Festival) (WSEQ of) (WSEQ Family) (WSEQ Classics) (WSEQ Vol) (WSEQ .) (WSEQ 2))(TD (WSEQ 1) (WSEQ .) (WSEQ 8))(TD (WSEQ 1972))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ NA))(TD (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .) (WSEQ ,) (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 2700))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Family) (WSEQ Classics)))(TR (TD (WSEQ The) (WSEQ Festival) (WSEQ of) (WSEQ Family) (WSEQ Classics) (WSEQ Vol) (WSEQ .) (WSEQ 1))(TD (WSEQ 2) (WSEQ .) (WSEQ 5))(TD (WSEQ 1972))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ NA))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 5400))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Kids) (WSEQ TV) (WSEQ ,) (WSEQ Family) (WSEQ Adventures) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Ages) (WSEQ 810) (WSEQ ,) (WSEQ Ages) (WSEQ 1112)))(TR (TD (WSEQ The) (WSEQ Emperors) (WSEQ New) (WSEQ Clothes))(TD (WSEQ 3) (WSEQ .) (WSEQ 0))(TD (WSEQ 1972))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Danny) (WSEQ Kaye) (WSEQ ,) (WSEQ Cyril) (WSEQ Ritchard))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 3000))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Classics)))(TR (TD (WSEQ The) (WSEQ Festival) (WSEQ of) (WSEQ Family) (WSEQ Classics) (WSEQ Vol) (WSEQ .) (WSEQ 3))(TD (WSEQ 1) (WSEQ .) (WSEQ 8))(TD (WSEQ 1972))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ NA))(TD (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .) (WSEQ ,) (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 2700))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810)))(TR (TD (WSEQ Here) (WSEQ Comes) (WSEQ Peter) (WSEQ Cottontail))(TD (WSEQ 3) (WSEQ .) (WSEQ 0))(TD (WSEQ 1971))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Danny) (WSEQ Kaye) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ Joan) (WSEQ Gardner) (WSEQ ,) (WSEQ Casey) (WSEQ Kasem) (WSEQ ,) (WSEQ Vincent) (WSEQ Price))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 3600))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Ages) (WSEQ 24) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810)))(TR (TD (WSEQ Santa) (WSEQ Claus) (WSEQ Is) (WSEQ Comin) (WSEQ to) (WSEQ Town))(TD (WSEQ 4) (WSEQ .) (WSEQ 2))(TD (WSEQ 1970))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Fred) (WSEQ Astaire) (WSEQ ,) (WSEQ Mickey) (WSEQ Rooney) (WSEQ ,) (WSEQ Keenan) (WSEQ Wynn) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ Joan) (WSEQ Gardner) (WSEQ ,) (WSEQ Robie) (WSEQ Lester) (WSEQ ,) (WSEQ Andrea) (WSEQ Sacino) (WSEQ ,) (WSEQ Dina) (WSEQ Lynn) (WSEQ ,) (WSEQ Gary) (WSEQ White))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 3060))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation)))(TR (TD (WSEQ Frosty) (WSEQ the) (WSEQ Snowman) (WSEQ ) (WSEQ Frosty) (WSEQ Returns))(TD (WSEQ 4) (WSEQ .) (WSEQ 0))(TD (WSEQ 1969))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Jimmy) (WSEQ Durante) (WSEQ ,) (WSEQ Billy) (WSEQ De) (WSEQ Wolfe) (WSEQ ,) (WSEQ Jackie) (WSEQ Vernon) (WSEQ ,) (WSEQ Paul) (WSEQ Frees) (WSEQ ,) (WSEQ June) (WSEQ Foray))(TD (WSEQ Jules) (WSEQ Bass) (WSEQ ,) (WSEQ Arthur) (WSEQ Rankin) (WSEQ Jr) (WSEQ .))(TD (WSEQ 2880))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Book) (WSEQ Characters) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Ages) (WSEQ 24) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810)))(TR (TD (WSEQ Mad) (WSEQ Monster) (WSEQ Party))(TD (WSEQ 3) (WSEQ .) (WSEQ 4))(TD (WSEQ 1967))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Boris) (WSEQ Karloff) (WSEQ ,) (WSEQ Allen) (WSEQ Swift) (WSEQ ,) (WSEQ Gale) (WSEQ Garnett) (WSEQ ,) (WSEQ Phyllis) (WSEQ Diller) (WSEQ ,) (WSEQ Ethel) (WSEQ Ennis))(TD (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 5700))(TD (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Comedies) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810)))(TR (TD (WSEQ The) (WSEQ Wacky) (WSEQ World) (WSEQ of) (WSEQ Mother) (WSEQ Goose))(TD (WSEQ 2) (WSEQ .) (WSEQ 2))(TD (WSEQ 1966))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Margaret) (WSEQ Rutherford))(TD (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 4860))(TD (WSEQ Anime) (WSEQ ) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ Animation)))(TR (TD (WSEQ The) (WSEQ Daydreamer))(TD (WSEQ 2) (WSEQ .) (WSEQ 7))(TD (WSEQ 1966))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Ray) (WSEQ Bolger) (WSEQ ,) (WSEQ Margaret) (WSEQ Hamilton) (WSEQ ,) (WSEQ Burl) (WSEQ Ives) (WSEQ ,) (WSEQ Hayley) (WSEQ Mills) (WSEQ ,) (WSEQ Patty) (WSEQ Duke) (WSEQ ,) (WSEQ Paul) (WSEQ OKeefe) (WSEQ ,) (WSEQ Jack) (WSEQ Gilford))(TD (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 5940))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Classics) (WSEQ ,) (WSEQ Family) (WSEQ Animation)))(TR (TD (WSEQ Return) (WSEQ to) (WSEQ Oz))(TD (WSEQ 2) (WSEQ .) (WSEQ 5))(TD (WSEQ 1964))(TD (WSEQ MPAA) (WSEQ NR))(TD (WSEQ Larry) (WSEQ Mann) (WSEQ ,) (WSEQ Alfie) (WSEQ Scopp) (WSEQ ,) (WSEQ Carl) (WSEQ Banis) (WSEQ ,) (WSEQ Pegi) (WSEQ Loder) (WSEQ ,) (WSEQ Susan) (WSEQ Conway))(TD (WSEQ Jules) (WSEQ Bass))(TD (WSEQ 3300))(TD (WSEQ Children) (WSEQ ) (WSEQ Family) (WSEQ ,) (WSEQ Family) (WSEQ Animation) (WSEQ ,) (WSEQ Family) (WSEQ SciFi) (WSEQ ) (WSEQ Fantasy) (WSEQ ,) (WSEQ Ages) (WSEQ 57) (WSEQ ,) (WSEQ Ages) (WSEQ 810))))))"
+ 
+#text = "(HTML(HEAD(TITLE(WSEQ Pat)(WSEQ Verducci)))(BODY(H1(WSEQ All)(WSEQ movies)(WSEQ by)(WSEQ Pat)(WSEQ Verducci))(TABLE(TR(TD(WSEQ Title))(TD(WSEQ Average)(WSEQ Rating))(TD(WSEQ Release)(WSEQ Date))(TD(WSEQ TV)(WSEQ /)(WSEQ MPAA)(WSEQ Rating))(TD(WSEQ Cast))(TD(WSEQ Directed)(WSEQ By))(TD(WSEQ Duration))(TD(WSEQ Genre)))(TR(TD(WSEQ True)(WSEQ Crime))(TD(WSEQ 3)(WSEQ .)(WSEQ 0))(TD(WSEQ 1995))(TD(WSEQ MPAA)(WSEQ RIGHT_ROUND)(WSEQ R)(WSEQ LEFT_ROUND))(TD(WSEQ Kevin)(WSEQ Dillon)(WSEQ ,)(WSEQ Alicia)(WSEQ Silverstone)(WSEQ ,)(WSEQ Bill)(WSEQ Nunn))(TD(WSEQ Pat)(WSEQ Verducci))(TD(WSEQ 7140))(TD(WSEQ Thrillers)(WSEQ ,)(WSEQ Suspense)(WSEQ ,)(WSEQ Lionsgate)(WSEQ Home)(WSEQ Entertainment))))))"
+#text = "(HTML-0(HEAD-0(TITLE-0(@TITLE-0(WSEQ-0 Blue)(WSEQ-0 Submarine))(WSEQ-0 6)))(BODY-0(H1-0(@H1-0(WSEQ-0 Blue)(WSEQ-0 Submarine))(WSEQ-0 6))(TABLE-0(@TABLE-0(@TABLE-1(@TABLE-2(TR-1(TD-3(WSEQ-3 Release)(WSEQ-3 Year))(TD-2(WSEQ-2 1999)))(TR-1(TD-3(WSEQ-3 Play)(WSEQ-3 Duration))(TD-0(@TD-3(WSEQ-2 N)(WSEQ-1 /))(WSEQ-0 A))))(TR-0(TD-2(WSEQ-2 Genres))(TD-1(@TD-3(@TD-2(@TD-2(@TD-2(@TD-2(@TD-3(WSEQ-2 Anime)(WSEQ-1 &))(WSEQ-1 Animation))(WSEQ-1 ,))(WSEQ-1 Anime))(WSEQ-1 Sci))(WSEQ-1 -))(WSEQ-0 Fi))))(TR-0(TD-2(WSEQ-2 Cast))(TD-1(@TD-3(WSEQ-2 N)(WSEQ-1 /))(WSEQ-0 A))))(TR-0(TD-2(WSEQ-2 Director))(TD-1(@TD-3(WSEQ-2 N)(WSEQ-1 /))(WSEQ-0 A))))))"
+text = "(HTML-0 (HEAD-0 (TITLE-0 (WSEQ-0 Harlem) (WSEQ-0 Nights))) (BODY-0 (H1-0 (WSEQ-0 Harlem) (WSEQ-0 Nights)) (TABLE-0 (@TABLE-0 (@TABLE-1 (@TABLE-2 (TR-1 (TD-3 (WSEQ-3 Release) (WSEQ-3 Year)) (TD-2 (WSEQ-2 1989))) (TR-1 (TD-3 (WSEQ-3 Play) (WSEQ-3 Duration)) (TD-2 (WSEQ-2 6900)))) (TR-0 (TD-2 (WSEQ-2 Genres)) (TD-1 (@TD-3 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-3 (WSEQ-2 Action) (WSEQ-1 &)) (WSEQ-1 Adventure)) (WSEQ-1 ,)) (WSEQ-1 Action)) (WSEQ-1 Comedies)) (WSEQ-1 ,)) (WSEQ-1 Crime)) (WSEQ-1 Action)) (WSEQ-1 ,)) (WSEQ-1 Period)) (WSEQ-1 Pieces)) (WSEQ-1 ,)) (WSEQ-1 20)) (WSEQ-1 th)) (WSEQ-1 Century)) (WSEQ-1 Period)) (WSEQ-1 Pieces)) (WSEQ-1 ,)) (WSEQ-1 Paramount)) (WSEQ-1 Home)) (WSEQ-0 Entertainment)))) (TR-0 (TD-2 (WSEQ-2 Cast)) (TD-1 (@TD-3 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-2 (@TD-3 (WSEQ-2 Eddie) (WSEQ-1 Murphy)) (WSEQ-1 ,)) (WSEQ-1 Richard)) (WSEQ-1 Pryor)) (WSEQ-1 ,)) (WSEQ-1 Redd)) (WSEQ-1 Foxx)) (WSEQ-1 ,)) (WSEQ-1 Danny)) (WSEQ-1 Aiello)) (WSEQ-1 ,)) (WSEQ-1 Michael)) (WSEQ-1 Lerner)) (WSEQ-1 ,)) (WSEQ-1 Della)) (WSEQ-1 Reese)) (WSEQ-1 ,)) (WSEQ-1 Berlinda)) (WSEQ-1 Tolbert)) (WSEQ-1 ,)) (WSEQ-1 Stan)) (WSEQ-1 Shaw)) (WSEQ-1 ,)) (WSEQ-1 Jasmine)) (WSEQ-1 Guy)) (WSEQ-1 ,)) (WSEQ-1 Vic)) (WSEQ-1 Polizos)) (WSEQ-1 ,)) (WSEQ-1 Lela)) (WSEQ-1 Rochon)) (WSEQ-1 ,)) (WSEQ-1 David)) (WSEQ-1 Marciano)) (WSEQ-1 ,)) (WSEQ-1 Arsenio)) (WSEQ-0 Hall)))) (TR-0 (TD-2 (WSEQ-2 Director)) (TD-1 (WSEQ-1 Eddie) (WSEQ-0 Murphy))))))"
 
 colormap = {}
-
+ 
 def gethtmlcode(text):
-	if text == 'WSEQ':
+	tokens = text.split('-')
+	if tokens[0] == 'WSEQ':
 		return 'font'
 	else:
-		return text
-		
+		return tokens[0]
+ 
 def getColor(text):
 	if not colormap.has_key(text):
 		colormap[text] = "#%0X%0X%0X" % (random.randint(0,255),random.randint(0,255),random.randint(0,255))
 	code = gethtmlcode(text)
 	return '<%s style="background-color:%s;padding:2px;margin:2px">%%s</%s>' % (code,colormap[text],code)
-	
+ 
 ws = []
-
+ 
 buffer = []
-
+ 
 for c in text:
 	#print ws
 	#print c
 	#sys.stdin.readline()
 	if c == '(':
-		ws.append(''.join(buffer))
+		if not ''.join(buffer).isspace():
+			ws.append(''.join(buffer).strip())
 		ws.append('(')
 		buffer = []
 	elif c == ')':
-		ws.append(''.join(buffer))
+		if not ''.join(buffer).isspace():
+			ws.append(''.join(buffer).strip())
 		buffer = []
 		lst = []
 		while True:
@@ -40,11 +45,22 @@ for c in text:
 			lst.append(e)
 		lst.reverse()
 		#print lst
-		s = ''.join(lst)
-		sp = s.find(' ')
-		color = getColor(s[:sp])
-		ws.append(color % s[sp:])
+		#s = ''.join(lst)
+		#sp = s.find(' ')
+		#color = getColor(s[:sp])
+		#ws.append(color % s[sp:])
+		if lst[0].startswith('@'):
+			ws.extend(lst[1:])
+		else:
+			sp = lst[0].find(' ')
+			if (sp == -1):
+				color = getColor(lst[0])
+				ws.append(color % ''.join(lst[1:]))
+			else:
+				color = getColor(lst[0][:sp])
+				ws.append(color % lst[0][sp+1:] + ''.join(lst[1:]))
 	else:
 		buffer.append(c)
-	
+ 
 print ''.join(ws)
+ 
