@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<overlay id="parsehtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="parsehtml.js"/>
+	<statusbar id="status-bar">
+		<button label="Parse Url File" oncommand="start();"/>
+	</statusbar>
+</overlay>

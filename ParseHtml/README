@@ -1,0 +1,13 @@
+How to add this extension to firefox
+
+1. open your firefox profile folder (usually ~/.mozilla/firefox)
+2. navigate to extensions folder in one of te profiles
+3. create a file named "parsehtml@ashishonline"
+4. enter the full path to the extension in this file
+5. restart firefox to open in this profile
+
+Using this extension
+
+1. when this extension is loaded you will see a "Parse Url File" button in the bottom right of status bar
+2. this reads urls from a file name "urls" in your home folder
+3. the output is saved in files named file-xxx in your home folder
