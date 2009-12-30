@@ -24,12 +24,39 @@ function ptext(text) {
     var tokens = text.split(/[\s+]/);
     var count=0;
     var ret = "";
-    for (count=0;count<tokens.length;count++) {
-		if (tokens[count].length == 0)
-			ret += "(WSEQ EMPTY)";
-		else
-			ret += "(WSEQ " + tokens[count] + ")";
-    }
+    
+    if (tokens.length > 10) {
+		for (count=0;count<5;count++) {
+			if (tokens[count].length == 0)
+				ret += "(WSEQ EMPTY)";
+			else
+				ret += "(WSEQ " + tokens[count] + ")";
+		}
+		
+		var intermediate = "";
+		for (;count<tokens.length-5;count++) {
+			if (tokens[count].length == 0)
+				intermediate += "EMPTY";
+			else
+				intermediate += tokens[count];
+		}
+		
+		ret += "(WSEQINTER " + intermediate + ")";
+		
+		for (;count<tokens.length;count++) {
+			if (tokens[count].length == 0)
+				ret += "(WSEQ EMPTY)";
+			else
+				ret += "(WSEQ " + tokens[count] + ")";
+		}
+	} else {
+		for (count=0;count<tokens.length;count++) {
+			if (tokens[count].length == 0)
+				ret += "(WSEQ EMPTY)";
+			else
+				ret += "(WSEQ " + tokens[count] + ")";
+		}
+	}
     return ret;
 }
 
