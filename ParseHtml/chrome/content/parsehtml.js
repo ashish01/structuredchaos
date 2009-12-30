@@ -39,6 +39,7 @@ function ptext(text) {
 				intermediate += "EMPTY";
 			else
 				intermediate += tokens[count];
+			intermediate += "_";
 		}
 		
 		ret += "(WSEQINTER " + intermediate + ")";
