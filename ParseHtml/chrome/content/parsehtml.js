@@ -86,9 +86,12 @@ function loadurls() {
 		fstream.init(homeDirFile, -1, 0, 0);
 		cstream.init(fstream, "UTF-8", 0, 0); // you can use another encoding here if you wish
 
-		str = {};
-		cstream.readString(-1, str); // read the whole file and put it in str.value
-		data = str.value;
+		var str = {};
+		while (cstream.readString(4096, str) != 0) {
+			data += str.value;
+		}
+
+		LOG(data.length);
 		
 		cstream.close(); // this closes fstream
 		data = data.trim();
@@ -99,6 +102,7 @@ function loadurls() {
 	}
 	
 	//LOG(urls);
+	LOG(urls.length);
 }
 
 //given the window id, parse the html inside this window
@@ -114,7 +118,6 @@ function parsehtml(e) {
 		var homeDirFile = dirService.get("Home", Components.interfaces.nsIFile); // returns an nsIFile object
 	
 		homeDirFile.append("file-" + count)
-		count += 1;
 		var foStream = Components.classes["@mozilla.org/network/file-output-stream;1"].
 			createInstance(Components.interfaces.nsIFileOutputStream);
 
@@ -136,8 +139,13 @@ function parsehtml(e) {
 	} catch (e) {
 		LOG(e);
 	} finally {
-		wid.close();
-		run();
+		try {
+			wid.close();
+		} catch (e) {
+			LOG(e);
+		} finally {
+			run();
+		}
 	}
 }
 
@@ -146,10 +154,12 @@ function run() {
 	if (count < urls.length) {
 		//get the next url
 		var currUrl = urls[count];
-		count ++;
+		count += 1;
 		
 		//open the window
 		var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,status=no,width=480,height=600";
+		
+		LOG(currUrl);
 		
 		wid = window.open(currUrl,currUrl,strWindowFeatures);
 		var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]  
